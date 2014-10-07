@@ -91,7 +91,7 @@ ENDL
 
 startDb
 
-if [ -d /restore/www ]; then
+if [ -e /restore/www/wp-config.php ]; then
   restoreFiles
   restoreDatabase
 else
