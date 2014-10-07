@@ -44,7 +44,7 @@ DOCKER_CONTAINER=$(docker run -d \
 	-v /etc/localtime:/etc/localtime:ro \
         -v $FROM/$1/restore:/restore \
         -v $FROM/$1/backups:/backups \
-        wp)
+        gzoritchak/wp-nginx)
 
 PORT=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "80/tcp") 0).HostPort}}' $DOCKER_CONTAINER)
 echo Port http :: $PORT
