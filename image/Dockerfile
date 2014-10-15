@@ -54,7 +54,6 @@ VOLUME /backups
 VOLUME /restore
 
 # private expose
-EXPOSE 3306
 EXPOSE 80
 
 CMD ["/bin/bash", "/start.sh"]
